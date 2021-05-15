@@ -81,6 +81,12 @@ proxy:
     headers:
       Authorization: ${SENTRY_TOKEN}
 
+  '/sonarcube':
+    target: https://sonarcloud.io/api/
+    allowedMethods: ['GET']
+    headers:
+      Authorization: Basic ${SONARCUBE_AUTH}
+
 organization:
   name: My Company
 
